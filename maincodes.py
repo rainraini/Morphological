@@ -2,10 +2,9 @@ import streamlit as st
 import numpy as np
 import pickle
 import joblib
-from  tensorflow.keras.models import load_model
-
-import   streamlit  as st; from PIL import Image; import numpy  as np
-import pandas  as pd; import pickle
+from PIL import Image; 
+import pandas  as pd;
+import pickle
 
 import os
 
@@ -87,7 +86,7 @@ if st.button('Run'):
 
         ## load model
         model2 = joblib.load('mybest.pkl')
-        output = model2.predict(normalized_new)
+        output = model2.predict([normalized_new])
         col19, col20, col21 = st.columns(3)
         # Display predictions
         with col19:
