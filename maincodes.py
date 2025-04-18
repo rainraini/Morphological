@@ -87,7 +87,7 @@ if st.button('Run'):
 
         ## load model
         model2 = joblib.load('mybest.pkl')
-        output = model2(normalized_new)
+        output = model2.predict(normalized_new)
         col19, col20, col21 = st.columns(3)
         # Display predictions
         with col19:
