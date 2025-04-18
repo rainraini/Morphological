@@ -8,8 +8,8 @@ import pickle
 
 import os
 
-filename1 = 'https://raw.githubusercontent.com/imsb1371/ZCAprediction/refs/heads/main/Capture1.PNG'
-filename2 = 'https://raw.githubusercontent.com/imsb1371/ZCAprediction/refs/heads/main/Capture2.PNG'
+filename1 = 'https://raw.githubusercontent.com/rainraini/Morphological/refs/heads/main/Capture1.PNG'
+filename2 = 'https://raw.githubusercontent.com/rainraini/Morphological/refs/heads/main/Capture2.PNG'
 
 st.title('Predicting Zinc, Cadmium, and Arsenic Levels in European Soils')
 with st.container():
@@ -93,20 +93,26 @@ if st.button('Run'):
             st.write("Morphological fractions", np.round(abs(output), decimals=4))
 
 
-filename7 = 'https://raw.githubusercontent.com/imsb1371/ZCAprediction/refs/heads/main/Capture3.PNG'
-filename8 = 'https://raw.githubusercontent.com/imsb1371/ZCAprediction/refs/heads/main/Capture4.PNG'
+filename7 = 'https://raw.githubusercontent.com/rainraini/Morphological/refs/heads/main/Capture3.PNG'
+filename8 = 'https://raw.githubusercontent.com/rainraini/Morphological/refs/heads/main/Capture4.PNG'
+filename9 = 'https://raw.githubusercontent.com/rainraini/Morphological/refs/heads/main/Capture5.PNG'
 
 col22, col23 = st.columns(2)
+
 with col22:
+    with st.container():
+        st.markdown("<h5>Supervisor:</h5>", unsafe_allow_html=True)
+        st.image(filename7) 
+with col23:
     with st.container():
         st.markdown("<h5>Developer:</h5>", unsafe_allow_html=True)
         st.image(filename8)
 
-with col23:
+col24, col23 = st.columns(2)
+with col22:
     with st.container():
-        st.markdown("<h5>Supervisor:</h5>", unsafe_allow_html=True)
-        st.image(filename7) 
-
+        st.markdown("<h5>Developer:</h5>", unsafe_allow_html=True)
+        st.image(filename9)
 
 footer = """
     <style>
